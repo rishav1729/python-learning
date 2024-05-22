@@ -1,0 +1,19 @@
+
+
+In Python, copy.copy() and the assignment operator = both can be used to create a shallow copy of an object, but they work differently.
+
+The assignment operator = creates a new reference to the same object. So, if you have an object a and you assign b = a, both a and b 
+refer to the same object in memory. Any changes made to the object through either a or b will be reflected in both because they are 
+just two names for the same object.
+The copy.copy() function, on the other hand, creates a new object that is a shallow copy of the original. This means that if you have an 
+object a and you create a shallow copy of it with b = copy.copy(a), b will be a new object with the same content as a, but they will be 
+two separate objects in memory. If a contains objects itself, then the references in b will point to these same objects, not copies of 
+them.
+
+
+#notes
+list can have duplicate elements to have unique elments in list you can use set(list_name)
+
+
+list.sort() will sort the list 
+sorted_list = sorted(list_name) will create a new sorted list(sorted_list) without affecting original list
