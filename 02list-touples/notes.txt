@@ -17,3 +17,359 @@ list can have duplicate elements to have unique elments in list you can use set(
 
 list.sort() will sort the list 
 sorted_list = sorted(list_name) will create a new sorted list(sorted_list) without affecting original list
+
+
+list slicing creates a deep copy so if you store it in new variable it will not affect original list.
+syntax: list_name[start:end]  where end index is not included
+syntax: list_name[start_index:end_index:step_size]
+
+
+# String in build functions
+
+let's go through each of the string functions mentioned earlier with a brief explanation and a code example:
+
+1. `capitalize()` - Makes the first character have upper case and the rest lower case.
+```python
+text = "hello world"
+print(text.capitalize())  # Output: "Hello world"
+```
+
+2. `casefold()` - Converts the string to lower case for caseless matching.
+```python
+text = "PYTHON"
+print(text.casefold())  # Output: "python"
+```
+
+3. `center(width, [fillchar])` - Centers the string, padding it with specified character (default is a space).
+```python
+text = "hello"
+print(text.center(20, '-'))  # Output: "-------hello--------"
+```
+
+4. `count(sub, [start, [end]])` - Returns the number of occurrences of a substring in the string.
+```python
+text = "hello world"
+print(text.count('l'))  # Output: 3
+```
+
+5. `encode([encoding, [errors]])` - Returns an encoded version of the string.
+```python
+text = "hello world"
+print(text.encode('utf-8'))  # Output: b'hello world'
+```
+
+6. `endswith(suffix, [start, [end]])` - Returns `True` if the string ends with the specified suffix.
+```python
+text = "hello world"
+print(text.endswith('world'))  # Output: True
+```
+
+7. `find(sub, [start, [end]])` - Searches the string for a specified value and returns the position of where it was found.
+```python
+text = "hello world"
+print(text.find('world'))  # Output: 6
+```
+
+8. `format(*args, **kwargs)` - Formats the string using format specifiers.
+```python
+text = "Hello, {}"
+print(text.format("world"))  # Output: "Hello, world"
+```
+
+9. `index(sub, [start, [end]])` - Like `find()`, but raises `ValueError` when the substring is not found.
+```python
+text = "hello world"
+print(text.index('world'))  # Output: 6
+```
+
+10. `isalnum()` - Returns `True` if all characters in the string are alphanumeric.
+```python
+text = "hello123"
+print(text.isalnum())  # Output: True
+```
+
+11. `isalpha()` - Returns `True` if all characters in the string are alphabetic.
+```python
+text = "hello"
+print(text.isalpha())  # Output: True
+```
+
+12. `isdigit()` - Returns `True` if all characters in the string are digits.
+```python
+text = "12345"
+print(text.isdigit())  # Output: True
+```
+
+13. `islower()` - Returns `True` if all characters in the string are lowercase.
+```python
+text = "hello world"
+print(text.islower())  # Output: True
+```
+
+14. `isspace()` - Returns `True` if all characters in the string are whitespace.
+```python
+text = "   "
+print(text.isspace())  # Output: True
+```
+
+15. `istitle()` - Returns `True` if the string is titled.
+```python
+text = "Hello World"
+print(text.istitle())  # Output: True
+```
+
+16. `isupper()` - Returns `True` if all characters in the string are uppercase.
+```python
+text = "HELLO WORLD"
+print(text.isupper())  # Output: True
+```
+
+17. `join(iterable)` - Concatenates the strings in the iterable.
+```python
+text = "-"
+print(text.join(["hello", "world"]))  # Output: "hello-world"
+```
+
+18. `lower()` - Converts all characters in the string to lowercase.
+```python
+text = "HELLO WORLD"
+print(text.lower())  # Output: "hello world"
+```
+
+19. `replace(old, new, [count])` - Returns a string where all occurrences of the old substring are replaced with the new substring.
+```python
+text = "hello world"
+print(text.replace('l', 'z'))  # Output: "hezzo worzd"
+```
+
+20. `split(sep=None, maxsplit=-1)` - Splits the string at the specified separator and returns a list.
+```python
+text = "hello world"
+print(text.split())  # Output: ['hello', 'world']
+print(text.split(' '))  # Output: ['hello', 'world']
+print(text.split('o'))  # Output: ['hell', ' w', 'rld']
+```
+
+21. `strip([chars])` - Returns a trimmed version of the string.
+```python
+text = "   hello world   "
+print(text.strip())  # Output: "hello world"
+```
+
+22. `upper()` - Converts all characters in the string to uppercase.
+```python
+text = "hello world"
+print(text.upper())  # Output: "HELLO WORLD"
+```
+
+These functions are very handy for various string manipulations in Python. 
+Remember that strings in Python are immutable, so these methods return new string objects and do not change the original string.
+
+
+# list 
+
+Certainly! Here are some of the built-in functions and methods for lists in Python, along with explanations and code examples:
+
+1. `append(obj)` - Adds an object to the end of the list.
+```python
+my_list = [1, 2, 3]
+my_list.append(4)
+print(my_list)  # Output: [1, 2, 3, 4]
+```
+
+2. `extend(iterable)` - Extends the list by appending elements from the iterable.
+```python
+my_list = [1, 2, 3]
+my_list.extend([4, 5])
+print(my_list)  # Output: [1, 2, 3, 4, 5]
+```
+
+3. `insert(index, obj)` - Inserts an object at a given index.
+```python
+my_list = [1, 2, 4]
+my_list.insert(2, 3)
+print(my_list)  # Output: [1, 2, 3, 4]
+```
+
+4. `remove(obj)` - Removes the first occurrence of an object from the list.
+```python
+my_list = [1, 2, 3, 2]
+my_list.remove(2)
+print(my_list)  # Output: [1, 3, 2]
+```
+
+5. `pop([index])` - Removes and returns the object at the index (default is the last item).
+```python
+my_list = [1, 2, 3]
+popped = my_list.pop()
+print(popped)  # Output: 3
+print(my_list)  # Output: [1, 2]
+```
+
+6. `clear()` - Removes all items from the list.
+```python
+my_list = [1, 2, 3]
+my_list.clear()
+print(my_list)  # Output: []
+```
+
+7. `index(obj, [start, [end]])` - Returns the index of the first occurrence of an object.
+```python
+my_list = ['a', 'b', 'c', 'b']
+print(my_list.index('b'))  # Output: 1
+```
+
+8. `count(obj)` - Returns the number of occurrences of an object in the list.
+```python
+my_list = [1, 1, 2, 3, 1]
+print(my_list.count(1))  # Output: 3
+```
+
+9. `sort([key, [reverse]])` - Sorts the list in ascending order by default.
+```python
+my_list = [3, 1, 2]
+my_list.sort()
+print(my_list)  # Output: [1, 2, 3]
+```
+
+10. `reverse()` - Reverses the elements of the list in place.
+```python
+my_list = [1, 2, 3]
+my_list.reverse()
+print(my_list)  # Output: [3, 2, 1]
+```
+
+11. `copy()` - Returns a shallow copy of the list.
+```python
+my_list = [1, 2, 3]
+new_list = my_list.copy()
+print(new_list)  # Output: [1, 2, 3]
+``` 
+
+These methods are very useful for manipulating lists in Python. 
+Remember that methods like `sort()` and `reverse()` modify the list in place and do not return a new list.
+Methods like `append()`, `extend()`, `insert()`, `remove()`, and `pop()` also modify the list in place. 
+The `copy()` method is useful when you need a new list with the same elements as the original list.
+
+
+1. `len(list)` - Returns the number of items in the list.
+```python
+my_list = [1, 2, 3]
+print(len(my_list))  # Output: 3
+```
+
+2. `max(list)` - Returns the item from the list with the maximum value.
+```python
+my_list = [1, 2, 3]
+print(max(my_list))  # Output: 3
+```
+
+3. `min(list)` - Returns the item from the list with the minimum value.
+```python
+my_list = [1, 2, 3]
+print(min(my_list))  # Output: 1
+```
+
+4. `sorted(list, [key, [reverse]])` - Returns a new sorted list from the items in the original list.
+```python
+my_list = [3, 1, 2]
+print(sorted(my_list))  # Output: [1, 2, 3]
+```
+
+5. `sum(list)` - Returns the sum of all items in the list.
+```python
+my_list = [1, 2, 3]
+print(sum(my_list))  # Output: 6
+```
+
+6. `all(list)` - Returns `True` if all items in the list are true or if the list is empty.
+```python
+my_list = [1, 2, 3]
+print(all(my_list))  # Output: True
+```
+
+7. `any(list)` - Returns `True` if any item in the list is true. If the list is empty, returns `False`.
+```python
+my_list = [0, 1, 2]
+print(any(my_list))  # Output: True
+```
+
+8. `list(iterable)` - Converts an iterable (like a tuple or a set) to a list.
+```python
+my_tuple = (1, 2, 3)
+print(list(my_tuple))  # Output: [1, 2, 3]
+```
+
+These functions are global and can be used directly with any list or iterable. 
+They are part of Python's built-in functions and provide a quick and easy way to perform common operations on lists.
+
+#zip function
+
+The `zip()` function in Python is used to combine several iterables (like lists, tuples, etc.) into a single iterable of tuples, where each tuple contains the elements from all the iterables that are at the same position. Let's go through the variations and examples:
+
+1. **Basic Usage with Lists**:
+```python
+list1 = [1, 2, 3]
+list2 = ['a', 'b', 'c']
+zipped = zip(list1, list2)
+print(list(zipped))  # Output: [(1, 'a'), (2, 'b'), (3, 'c')]
+```
+
+2. **With Tuples**:
+```python
+tuple1 = (1, 2, 3)
+tuple2 = ('a', 'b', 'c')
+zipped = zip(tuple1, tuple2)
+print(list(zipped))  # Output: [(1, 'a'), (2, 'b'), (3, 'c')]
+```
+
+3. **Multiple Iterables**:
+```python
+list1 = [1, 2, 3]
+list2 = ['a', 'b', 'c']
+list3 = ['x', 'y', 'z']
+zipped = zip(list1, list2, list3)
+print(list(zipped))  # Output: [(1, 'a', 'x'), (2, 'b', 'y'), (3, 'c', 'z')]
+```
+
+4. **Iterables of Unequal Lengths** - `zip()` will only iterate over the smallest iterable:
+```python
+list1 = [1, 2, 3]
+list2 = ['a', 'b']
+zipped = zip(list1, list2)
+print(list(zipped))  # Output: [(1, 'a'), (2, 'b')]
+```
+
+5. **Using `zip()` with `enumerate()`**:
+```python
+names = ['Mukesh', 'Roni', 'Chari']
+ages = [24, 50, 18]
+for i, (name, age) in enumerate(zip(names, ages)):
+    print(i, name, age)
+# Output:
+# 0 Mukesh 24
+# 1 Roni 50
+# 2 Chari 18
+```
+
+6. **Zipping and Creating a Dictionary**:
+```python
+stocks = ['GEEKS', 'For', 'geeks']
+prices = [2175, 1127, 2750]
+stock_prices = dict(zip(stocks, prices))
+print(stock_prices)  # Output: {'GEEKS': 2175, 'For': 1127, 'geeks': 2750}
+```
+
+7. **Unzipping** - You can also 'unzip' a list of tuples into separate tuples using the `*` operator:
+```python
+zipped_list = [(1, 'a'), (2, 'b'), (3, 'c')]
+numbers, letters = zip(*zipped_list)
+print(list(numbers))  # Output: [1, 2, 3]
+print(list(letters))  # Output: ['a', 'b', 'c']
+```
+
+These examples cover the basic and some advanced uses of the `zip()` function in Python.
+It's a versatile function that can be used in many different scenarios where you need to aggregate data from multiple sequences in a parallel manner.
+
+
+

@@ -58,3 +58,24 @@ b[2][0] = 30  # This will change only 'b', not 'a'
 print(a)  # Output will be [1, 2, [3, 4]]
 
 
+#string
+text = "hello world, hello universe"
+# Count occurrences of 'hello' without start and end parameters
+full_count = text.count('hello')
+print(full_count)  # Output: 2
+
+# Count occurrences of 'hello' starting from index 1 and ending at index 15
+range_count = text.count('hello', 1, 15)
+print(range_count)  # Output: 0
+
+
+#split
+text = "hello world"
+print(text.split('o'))  # Output: ['hell', ' w', 'rld']
+print(text.split())  # Output: ['hello', 'world']
+print(text.split(' '))  # Output: ['hello', 'world']
+
+#String 
+my_string = 'Hello World'
+print(my_string[18:0:-2]) # drWol
+print(my_string[4::-1]) # olleH
