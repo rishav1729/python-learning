@@ -1,0 +1,12 @@
+# dict[key_name] vs dict.get[key_name]
+
+dict_name[key_name]: This is the standard method of accessing the value for a given key_name in the dictionary. 
+                     If the key is present in the dictionary, it will return the value associated with that key. 
+                     However, if the key is not found, it will raise a KeyError.
+
+dict_name.get(key_name): The get method is a safer alternative to the standard method. 
+                         It allows you to access the value associated with key_name, but if the key is not found, 
+                         it will return None instead of raising an error. You can also provide a default value that 
+                         will be returned if the key is not found, like this: dict_name.get(key_name, default_value).
+
+
