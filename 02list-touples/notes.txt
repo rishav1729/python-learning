@@ -373,3 +373,6 @@ It's a versatile function that can be used in many different scenarios where you
 
 
 
+list_1 = list_2[:] will create a deep copy
+
+
