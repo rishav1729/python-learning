@@ -1,0 +1,67 @@
+## ways to convert string to int 
+
+To convert a Python string to an integer, you have a couple of options:
+
+1. **Using the `int()` Function:**
+   If you have a decimal integer represented as a string and you want to convert it to an integer, you can use the `int()` function. Simply pass the string to `int()`, and it will return the corresponding decimal integer. For example:
+   ```python
+   my_string = "10"
+   my_integer = int(my_string)
+   print(my_integer)  # Output: 10
+   ```
+
+2. **Using String Formatting with `%s`:**
+   You can also use string formatting to insert an integer into a string. The `%s` conversion specifier represents a string. Here's an example:
+   ```python
+   my_integer = 42
+   my_string = "%s" % my_integer
+   print(my_string)  # Output: "42"
+   ```
+
+Remember that the `int()` function directly converts a string to an integer, while string formatting allows you to customize how the integer is inserted into a string.
+
+
+## using f string to convert int to string 
+
+Certainly! In Python, you can use **f-strings** (formatted string literals) to insert an integer into a string. F-strings provide a concise and readable way to format strings with expressions. Here's how you can use them for integer formatting:
+
+```python
+my_integer = 42
+my_string = f"{my_integer}"
+print(my_string)  # Output: "42"
+```
+
+
+##  "{}".format()
+
+In Python, the `"{}".format()` method is used to format and insert values into a string.
+
+1. **Placeholder Syntax:**
+   - The format method uses curly braces `{}` as placeholders inside a string.
+   - You can include one or more placeholders in your string, and they will be replaced with actual values when you call the `format()` method.
+
+2. **Value Insertion:**
+   - You provide the values to be inserted as arguments to the `format()` method.
+   - These values can be:
+     - A list of values separated by commas.
+     - A key-value list (where keys correspond to named placeholders).
+     - A combination of both.
+
+3. **Examples:**
+   - Using named placeholders:
+     ```python
+     txt1 = "My name is {fname}, I'm {age}".format(fname="John", age=36)
+     ```
+   - Using numbered placeholders:
+     ```python
+     txt2 = "My name is {0}, I'm {1}".format("John", 36)
+     ```
+   - Using empty placeholders (order matters):
+     ```python
+     txt3 = "My name is {}, I'm {}".format("John", 36)
+     ```
+
+
+5. **Return Value:**
+   - The `format()` method returns the formatted string.
+
